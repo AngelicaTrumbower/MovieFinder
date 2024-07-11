@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css" />
+    <title>Movies</title>
+</head>
+<body>
+    <div class="container__movie">
+        <div class="row__movie">
+            <header class="nav-bar">
+                <div class="nav-container">
+                <div class="logo">
+                    <h1>Movie Finder</h1>
+                </div>
+                <div class="nav__links">
+                    <a href="index.html" class="nav__link hover-effect">Home</a>
+                    <a href="" class="nav__link hover-effect"
+                    >Discover Your <span class="blue">Movie</span></a
+                    >
+                    <a href="" class="nav__link btn">Contact</a>
+                </div>
+                </div>
+            </header>
+            <div class="post__search">
+                <form id="input__form" onclick= "onFormSubmit(event)" >
+                    <input id="search__input"
+                        type="text"
+                        placeholder="Movie"
+                        class="input"/>
+                    <button type="submit" onclick="onSearchChange(event)" class="input__btn btn" >Search Now
+                    </button>
+                </form>
+                <div class="movie__container">
+                    <div class="movie__listing" id="movie1">
+                        <img >
+                        <p></p>
+                        <p></p>
+                    </div>
+                    <div class="movie__listing" id="movie2">
+                        <img >
+                        <p></p>
+                        <p></p>
+                    </div>
+                    <div class="movie__listing" id="movie3">
+                        <img >
+                        <p></p>
+                        <p></p>
+                    </div>
+                    <div class="movie__listing" id="movie4">
+                        <img>
+                        <p></p>
+                        <p></p>
+                    </div>
+                    <div class="movie__listing" id="movie5">
+                        <img>
+                        <p></p>
+                        <p></p>
+                    </div>
+                    <div class="movie__listing" id="movie6">
+                        <img >
+                        <p></p>
+                        <p></p>
+                    </div>
+                    <div class="movie__listing" id="movie7">
+                        <img >
+                        <p></p>
+                        <p></p>
+                    </div>
+                    <div class="movie__listing" id="movie8">
+                        <img>
+                        <p></p>
+                        <p></p>
+                    </div>
+                    <div class="movie__listing" id="movie9">
+                        <img>
+                        <p></p>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="loading__container">
+                    <div class="loading__page"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="movie.js"></script>
+</body>
+</html>
