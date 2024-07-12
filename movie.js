@@ -2,34 +2,38 @@ const apiKey = 'http://www.omdbapi.com/?i=tt3896198&apikey=72e6749a&s=';
 const searchInput = document.getElementById("search__input");
 const searchForm = document.getElementById("input__form");
 
-window.addEventListener('load', (event) => {
+// window.addEventListener('load', (event) => {
     
-    const searchHomeInput = localStorage.getItem('searchHomeInput');
-    console.log('Search term retrieved from local storage:', searchHomeInput);
+//     const searchHomeInput = localStorage.getItem('searchHomeInput');
+//     console.log('Search term retrieved from local storage:', searchHomeInput);
 
-})
+// })
 
 
+function onSearchChange(event) {
+    const searchTerm =event.target.value;
+    console.log('Search term changed:', searchTerm);
+}
 
 async function onFormSubmit(event) {
     event.preventDefault();
 
-    // const searchHomeInput = localStorage.getItem('searchHomeInput');
+    const searchHomeInput = localStorage.getItem('searchHomeInput');
     // console.log('Search term retrieved from local storage:', searchHomeInput);
 
     const searchInput = document.getElementById("search__input").value;
-    console.log('form submitted with search term:', searchInput);
+    // console.log('form submitted with search term:', searchInput);
 
-    // const searchTerm = searchHomeInput ? searchHomeInput : searchInput;
+    const searchTerm = searchInput ? searchInput : searchHomeInput;
     
-    const apiEnd = `http://www.omdbapi.com/?i=tt3896198&apikey=72e6749a&s=${encodeURIComponent(searchInput)}`;
-    console.log('API Endpoint:', apiEnd);
+    const apiEnd = `http://www.omdbapi.com/?i=tt3896198&apikey=72e6749a&s=${encodeURIComponent(searchTerm)}`;
+    // console.log('API Endpoint:', apiEnd);
 
     const movies = await fetch(apiEnd);
-    console.log(movies)
+    // console.log(movies)
 
     const movieData = await movies.json();
-    console.log(movieData)
+    // console.log(movieData)
 
     const moviesArray = movieData.Search;
     
@@ -46,10 +50,6 @@ async function onFormSubmit(event) {
     const movieContainer = document.querySelector('.movie__container');
 }
 
-function onSearchChange(event) {
-    const searchTerm =event.target.value;
-    console.log('Search term changed:', searchTerm);
-}
 
 function movieHTML(movie) {
     return `<img src="${movie.Poster}">
