@@ -11,12 +11,6 @@ document.getElementById('input__form').addEventListener('submit', function (even
     fetchMovies();
 });
 
-function onSearchChange(event) {
-    const searchTerm =event.target.value;
-    console.log('Search term changed:', searchTerm);
-    fetchMovies();
-}
-
 async function fetchMovies(event) {
     const searchInput = document.getElementById("search__input").value;
     const apiEnd = `http://www.omdbapi.com/?i=tt3896198&apikey=72e6749a&s=${encodeURIComponent(searchInput)}`;
