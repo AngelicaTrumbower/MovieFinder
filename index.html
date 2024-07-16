@@ -15,7 +15,7 @@
         </div>
         <div class="nav__links">
           <a href="index.html" class="nav__link hover-effect">Home</a>
-          <a href="movies.html" class="nav__link hover-effect"
+          <a href="" class="nav__link hover-effect"
             >Discover Your <span class="blue">Movie</span></a
           >
           <a href="" class="nav__link btn">Contact</a>
@@ -24,6 +24,14 @@
     </header>
     <div class="container">
       <div class="row">
+        <form id="input__form" >
+          <input id="search__input"
+              type="text"
+              placeholder="Movie Title, Year, or Keyword"
+              class="input"/>
+          <button type="submit" onclick="onSearchChange(event)" class="input__btn btn" >Search Now
+          </button>
+        </form>
         <div class="search__container">
           <div class="search__header">
             <img src="./assets/undraw_horror_movie_3988.svg" class="img" />
@@ -33,20 +41,6 @@
               Uncover hidden gems and popular shows. Find the
               <span class="blue">perfect movie for every moment!</span>
               </h2>
-              <form id="input__form"  >
-                <input
-                  type="text"
-                  placeholder="Movie Title, Year, or Keyword"
-                  
-                  id="input"
-                  class="input"/>
-                <button type="sumbit" 
-                  value="Sumbit"
-                  onclick="showMoviesPage(event)"
-                  class=" input__btn btn"
-                  >Search Now
-                </button>
-              </form>
             </div>
             <img src="./assets/undraw_home_cinema_l7yl (1).svg" class="img" />
           </div>
@@ -59,7 +53,17 @@
             />
           </figure>
         </div>
-      </div>
+        <div class="movie__container">
+            <div class="movie__listing" id="movie1"></div>
+            <div class="movie__listing" id="movie2"></div>
+            <div class="movie__listing" id="movie3"></div>
+            <div class="movie__listing" id="movie4"></div>
+            <div class="movie__listing" id="movie5"></div>
+            <div class="movie__listing" id="movie6"></div>
+            <div class="movie__listing" id="movie7"></div>
+            <div class="movie__listing" id="movie8"></div>
+            <div class="movie__listing" id="movie9"></div>
+        </div>
     </div>
   <script src="index.js"></script>
   </body>
